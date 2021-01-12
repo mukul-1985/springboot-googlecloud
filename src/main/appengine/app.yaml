@@ -1,0 +1,4 @@
+
+# [START gae_java11_helloworld_yaml]
+runtime: java11
+# [END gae_java11_helloworld_yaml]

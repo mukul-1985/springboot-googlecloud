@@ -1,0 +1,16 @@
+# This is to create a second service in same appengine 
+service: test
+
+# [START gae_java11_helloworld_yaml]
+runtime: java11
+# [END gae_java11_helloworld_yaml]
+instance_class: F2
+env_variables:
+  ENV: "test"
+inbound_services:
+  - warmup
+handlers:
+  - url: /_ah/warmup
+    script: auto
+automatic_scaling:
+  min_idle_instances: 1
